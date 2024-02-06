@@ -9,6 +9,7 @@ urlpatterns = [
     # view refers to the view function
     # name the URL
     path(route='', view=views.CourseListView.as_view(), name='index'),
+    path('sharpe/', view=views.read_excel_and_render_html, name='sharpe'),
     path('registration/', views.registration_request, name='registration'),
     path('login/', views.login_request, name='login'),
     path('logout/', views.logout_request, name='logout'),
